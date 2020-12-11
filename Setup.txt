@@ -1,0 +1,15 @@
+Setup:
+ChumpChangeServer/Configs :
+	/Plaid_Config: Add Plaid Keys
+	/SQL_Config.py: Edit database_uri
+
+ChumpChange 1.1: 
+	ViewController.swift: change ip and port variable
+
+Postgres: Create table for accounts and access_token
+	accounts: username(primary key, char varying, size(80), nullable = false)
+		  password(char varying, size(120), nullable = false)
+
+	access_token: id = (char varying, size(131), primary key, nullable = false)
+		      username(char varying, size(80), nullable = false)
+		      access_token(char varying, size(51), nullable = false)
